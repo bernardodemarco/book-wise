@@ -19,8 +19,6 @@ model User {
   accounts Account[]
   sessions Session[]
   ratings  Rating[]
-
-  @@map("users")
 }
 
 model Book {
@@ -34,8 +32,6 @@ model Book {
 
   categories CategoriesOnBooks[]
   ratings    Rating[]
-
-  @@map("books")
 }
 
 model Category {
@@ -43,8 +39,6 @@ model Category {
   name String @unique
 
   books CategoriesOnBooks[]
-
-  @@map("categories")
 }
 
 model CategoriesOnBooks {
@@ -68,8 +62,6 @@ model Rating {
 
   user    User   @relation(fields: [user_id], references: [id])
   user_id String
-
-  @@map("ratings")
 }
 
 model Account {
@@ -88,7 +80,6 @@ model Account {
   user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@unique([provider, providerAccountId])
-  @@map("accounts")
 }
 
 model Session {
@@ -97,6 +88,4 @@ model Session {
   userId       String
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@map("sessions")
 }

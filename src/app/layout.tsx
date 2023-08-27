@@ -1,6 +1,8 @@
 import './../styles/globals.css'
 import type { Metadata } from 'next'
+import { getServerSession, Session } from 'next-auth'
 import { Nunito_Sans as NunitoSans } from 'next/font/google'
+import { SessionProvider } from '@/contexts/SessionProvider'
 
 const nunitoSans = NunitoSans({ subsets: ['latin'] })
 
@@ -9,14 +11,18 @@ export const metadata: Metadata = {
   description: 'BookWise web platform',
 }
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
+  const session = (await getServerSession()) as Session
+
   return (
     <html lang="pt-BR">
-      <body className={nunitoSans.className}>{children}</body>
+      <SessionProvider session={session}>
+        <body className={nunitoSans.className}>{children}</body>
+      </SessionProvider>
     </html>
   )
 }

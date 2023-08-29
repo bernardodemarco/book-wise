@@ -1,6 +1,7 @@
 import { GithubIcon } from '@/assets/icons/GithubIcon'
 import { GoogleIcon } from '@/assets/icons/GoogleIcon'
 import { GuestIcon } from '@/assets/icons/GuestIcon'
+import { AuthCard } from '@/components/ui/cards/AuthCard'
 import Image from 'next/image'
 import authImage from 'public/auth-image.png'
 
@@ -18,18 +19,18 @@ export default function AuthPage() {
           </p>
         </div>
         <div className="space-y-4">
-          <button className="flex w-full max-w-[85vw] items-center gap-5 rounded-lg bg-gray-600 px-6 py-5 text-lg font-bold text-gray-200">
+          <AuthCard socialMedia="google">
             <GoogleIcon />
             Entrar com Google
-          </button>
-          <button className="flex w-full max-w-[85vw] items-center gap-5 rounded-lg bg-gray-600 px-6 py-5 text-lg font-bold text-gray-200">
+          </AuthCard>
+          <AuthCard socialMedia="github">
             <GithubIcon />
             Entrar com Github
-          </button>
-          <button className="flex w-full max-w-[85vw] items-center gap-5 rounded-lg bg-gray-600 px-6 py-5 text-lg font-bold text-gray-200">
+          </AuthCard>
+          <AuthCard socialMedia="guest">
             <GuestIcon />
-            Entrar como visitante
-          </button>
+            Entrar como Visitante
+          </AuthCard>
         </div>
       </section>
     </div>

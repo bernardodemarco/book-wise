@@ -23,7 +23,7 @@ export function AuthCard({ socialMedia, children }: AuthCardProps) {
   return (
     <button
       onClick={handleAuth}
-      className="flex w-full max-w-[320px] items-center gap-5 rounded-lg bg-gray-600 px-6 py-5 text-lg font-bold text-gray-200"
+      className="flex w-full  items-center gap-5 rounded-lg bg-gray-600 px-6 py-5 text-lg font-bold text-gray-200"
     >
       {children}
     </button>

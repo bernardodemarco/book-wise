@@ -7,8 +7,12 @@ import authImage from 'public/auth-image.png'
 
 export default function AuthPage() {
   return (
-    <div className="flex-1 p-5">
-      <Image src={authImage} alt="" className="hidden" />
+    <div className="flex flex-1 justify-center p-5 lg:justify-between">
+      <Image
+        src={authImage}
+        alt=""
+        className="hidden lg:block lg:max-h-screen"
+      />
       <section className="mx-auto flex min-h-full flex-col justify-center gap-10">
         <div className="flex flex-col gap-1">
           <strong className="text-xl font-bold text-gray-100">
@@ -18,7 +22,7 @@ export default function AuthPage() {
             Faça seu login ou acesse como visitante.
           </p>
         </div>
-        <div className="space-y-4">
+        <div className="w-96 max-w-[80vw] space-y-4">
           <AuthCard socialMedia="google">
             <GoogleIcon />
             Entrar com Google

@@ -9,7 +9,7 @@ export default function AuthPage() {
   return (
     <div className="flex-1 p-5">
       <Image src={authImage} alt="" className="hidden" />
-      <section className="mx-auto flex min-h-full w-80 flex-col justify-center gap-10">
+      <section className="mx-auto flex min-h-full flex-col justify-center gap-10">
         <div className="flex flex-col gap-1">
           <strong className="text-xl font-bold text-gray-100">
             Boas vindas!

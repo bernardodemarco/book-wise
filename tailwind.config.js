@@ -2,6 +2,11 @@
 module.exports = {
   content: ['./src/**/*.tsx'],
   theme: {
+    extend: {
+      height: {
+        authImageHeight: 'calc(100vh - 40px)',
+      },
+    },
     colors: {
       green: {
         100: '#50B2C0',
@@ -26,6 +31,8 @@ module.exports = {
     backgroundImage: {
       'gradient-horizontal': 'linear-gradient(90deg, #7FD1CC 0%, #9694F5 100%)',
       'gradient-vertical': 'linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)',
+      'background-gradient':
+        'linear-gradient(0deg, rgba(42, 40, 121, 0.60) 0%, rgba(42, 40, 121, 0.60) 100%)',
     },
   },
   plugins: [],

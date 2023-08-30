@@ -3,21 +3,23 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = env("DATABASE_URL")
+  provider = "postgresql"
+  url      = env("POSTGRES_DEV_URL")
+  // url       = env("POSTGRES_PRISMA_URL")
+  // directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model User {
-  id         String   @id @default(uuid())
-  name       String
-  avatar_url String?
-  created_at DateTime @default(now())
+  id            String    @id @default(uuid())
+  name          String
+  email         String?   @unique
+  emailVerified DateTime?
+  image         String?
+  created_at    DateTime  @default(now())
 
   accounts Account[]
   sessions Session[]
   ratings  Rating[]
-
-  @@map("users")
 }
 
 model Book {
@@ -31,8 +33,6 @@ model Book {
 
   categories CategoriesOnBooks[]
   ratings    Rating[]
-
-  @@map("books")
 }
 
 model Category {
@@ -40,8 +40,6 @@ model Category {
   name String @unique
 
   books CategoriesOnBooks[]
-
-  @@map("categories")
 }
 
 model CategoriesOnBooks {
@@ -65,35 +63,30 @@ model Rating {
 
   user    User   @relation(fields: [user_id], references: [id])
   user_id String
-
-  @@map("ratings")
 }
 
 model Account {
-  id                  String  @id @default(cuid())
-  user_id             String
-  type                String
-  provider            String
-  provider_account_id String
-  refresh_token       String?
-  access_token        String?
-  expires_at          Int?
-  token_type          String?
-  scope               String?
-  id_token            String?
-  session_state       String?
-  user                User    @relation(fields: [user_id], references: [id], onDelete: Cascade)
+  id                String  @id @default(cuid())
+  userId            String
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String?
+  access_token      String?
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String?
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@unique([provider, provider_account_id])
-  @@map("accounts")
+  @@unique([provider, providerAccountId])
 }
 
 model Session {
-  id            String   @id @default(cuid())
-  session_token String   @unique
-  user_id       String
-  expires       DateTime
-  user          User     @relation(fields: [user_id], references: [id], onDelete: Cascade)
-
-  @@map("sessions")
+  id           String   @id @default(cuid())
+  sessionToken String   @unique
+  userId       String
+  expires      DateTime
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }

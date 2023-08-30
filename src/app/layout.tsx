@@ -23,7 +23,7 @@ export default async function RootLayout({
     <html lang="pt-BR">
       <SessionProvider session={session}>
         <body className={nunitoSans.className}>
-          <main className="flex min-h-screen bg-gray-800">{children}</main>
+          <div className="flex min-h-screen bg-gray-800">{children}</div>
         </body>
       </SessionProvider>
     </html>

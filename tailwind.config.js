@@ -6,6 +6,9 @@ module.exports = {
       height: {
         authImageHeight: 'calc(100vh - 40px)',
       },
+      gridTemplateColumns: {
+        app: '232px 1fr 324px',
+      },
     },
     colors: {
       green: {

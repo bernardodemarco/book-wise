@@ -3,11 +3,11 @@ import { GoogleIcon } from '@/assets/icons/GoogleIcon'
 import { GuestIcon } from '@/assets/icons/GuestIcon'
 
 import { AuthImage } from '@/components/auth-page/AuthImage'
-import { AuthCard } from '@/components/ui/cards/AuthCard'
+import { AuthCard } from '@/components/AuthCard'
 
 export default function AuthPage() {
   return (
-    <div className="flex flex-1 justify-center p-5 lg:justify-between">
+    <main className="flex flex-1 justify-center p-5 lg:justify-between">
       <AuthImage />
       <section className="mx-auto flex min-h-full flex-col justify-center gap-10">
         <div className="flex flex-col gap-1">
@@ -33,6 +33,6 @@ export default function AuthPage() {
           </AuthCard>
         </div>
       </section>
-    </div>
+    </main>
   )
 }

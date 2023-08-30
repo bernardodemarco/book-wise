@@ -1,21 +1,14 @@
-import Image from 'next/image'
-
 import { GithubIcon } from '@/assets/icons/GithubIcon'
 import { GoogleIcon } from '@/assets/icons/GoogleIcon'
 import { GuestIcon } from '@/assets/icons/GuestIcon'
 
+import { AuthImage } from '@/components/auth-page/AuthImage'
 import { AuthCard } from '@/components/ui/cards/AuthCard'
-
-import authImage from 'public/auth-image.png'
 
 export default function AuthPage() {
   return (
     <div className="flex flex-1 justify-center p-5 lg:justify-between">
-      <Image
-        src={authImage}
-        alt=""
-        className="hidden lg:block lg:max-h-screen"
-      />
+      <AuthImage />
       <section className="mx-auto flex min-h-full flex-col justify-center gap-10">
         <div className="flex flex-col gap-1">
           <strong className="text-xl font-bold text-gray-100">

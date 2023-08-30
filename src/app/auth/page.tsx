@@ -1,8 +1,11 @@
+import Image from 'next/image'
+
 import { GithubIcon } from '@/assets/icons/GithubIcon'
 import { GoogleIcon } from '@/assets/icons/GoogleIcon'
 import { GuestIcon } from '@/assets/icons/GuestIcon'
+
 import { AuthCard } from '@/components/ui/cards/AuthCard'
-import Image from 'next/image'
+
 import authImage from 'public/auth-image.png'
 
 export default function AuthPage() {

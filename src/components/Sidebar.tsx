@@ -5,7 +5,7 @@ import { NavLink } from './NavLink'
 
 export function Sidebar() {
   return (
-    <aside className="h-screen-height flex flex-col items-center rounded-xl bg-gray-700 pb-6 pt-10">
+    <aside className="flex h-screen-height flex-col items-center rounded-xl bg-gray-700 pb-6 pt-10">
       <BookWiseLogo className="mb-14 h-8 w-32" />
       <nav className="flex flex-col items-start gap-6">
         <NavLink slug="">

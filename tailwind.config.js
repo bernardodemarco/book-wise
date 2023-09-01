@@ -7,7 +7,7 @@ module.exports = {
         'screen-height': 'calc(100vh - 40px)',
       },
       gridTemplateColumns: {
-        app: '232px 1fr 324px',
+        app: '232px 1fr',
       },
     },
     colors: {

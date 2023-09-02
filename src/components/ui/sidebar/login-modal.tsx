@@ -19,8 +19,8 @@ export function LoginModal() {
       </Dialog.Trigger>
 
       <Dialog.Portal>
-        <Dialog.Overlay className="fixed inset-0 bg-green-100 opacity-60" />
-        <Dialog.Content className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col gap-8 rounded-xl bg-gray-700 px-24 py-10">
+        <Dialog.Overlay className="fixed inset-0 bg-gray-800 opacity-60" />
+        <Dialog.Content className="absolute left-1/2 top-1/2 flex min-w-[80vw] max-w-[95vw] -translate-x-1/2 -translate-y-1/2 flex-col gap-8 rounded-xl bg-gray-700 px-6 py-10 md:min-w-min md:px-24">
           <Dialog.Title className="font-bold text-gray-200">
             Faça login para deixar sua avaliação
           </Dialog.Title>
@@ -35,7 +35,7 @@ export function LoginModal() {
             </AuthCard>
           </div>
           <Dialog.Close asChild>
-            <button className="absolute right-4 top-4">
+            <button className="absolute right-7 top-7">
               <X className="h6 w-6 text-gray-400" />
             </button>
           </Dialog.Close>

@@ -1,7 +1,7 @@
 'use client'
 
 import { LogOut } from 'lucide-react'
-import { Avatar } from '../Avatar'
+import { Avatar } from '../avatar'
 import { signOut } from 'next-auth/react'
 
 interface LogoutButtonProps {

@@ -13,7 +13,7 @@ export function Avatar({ src, alt, size, ...props }: AvatarProps) {
 
   return (
     <Image
-      className={`border-green-100 rounded-full ${borderWidth}`}
+      className={`rounded-full border-green-100 ${borderWidth}`}
       src={src}
       alt={alt}
       width={width}

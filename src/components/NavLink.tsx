@@ -20,12 +20,14 @@ export function NavLink({ slug, children }: NavLinkProps) {
       href={`/${slug}`}
       className={
         isActive
-          ? "mr-4 flex items-center gap-3 before:block before:h-6 before:w-1 before:rounded-full before:bg-gradient-vertical before:content-['']"
-          : "mr-4 flex items-center gap-3 before:block before:h-6 before:w-1 before:rounded-full before:bg-gray-700 before:content-['']"
+          ? "mr-4 flex items-center gap-3 before:block before:h-4 before:w-1 before:rounded-full before:bg-gradient-vertical before:content-[''] sm:before:h-6 sm:before:w-1"
+          : "mr-4 flex items-center gap-3 before:block before:h-4 before:w-1 before:rounded-full before:bg-gray-800 before:content-[''] sm:before:h-6 sm:before:w-1 sm:before:bg-gray-700"
       }
     >
       {children}
-      <span className="text-base font-bold text-gray-100">{navLinkText}</span>
+      <span className="hidden text-base font-bold text-gray-100 md:block">
+        {navLinkText}
+      </span>
     </Link>
   )
 }

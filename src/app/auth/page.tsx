@@ -2,8 +2,8 @@ import { GithubIcon } from '@/assets/icons/GithubIcon'
 import { GoogleIcon } from '@/assets/icons/GoogleIcon'
 import { GuestIcon } from '@/assets/icons/GuestIcon'
 
-import { AuthImage } from '@/components/auth-page/AuthImage'
-import { AuthCard } from '@/components/AuthCard'
+import { AuthImage } from '@/components/auth-page/auth-image'
+import { AuthCard } from '@/components/ui/auth-card'
 
 export default function AuthPage() {
   return (

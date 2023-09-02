@@ -4,10 +4,12 @@ module.exports = {
   theme: {
     extend: {
       height: {
-        authImageHeight: 'calc(100vh - 40px)',
+        'screen-height': 'calc(100vh - 40px)',
       },
       gridTemplateColumns: {
-        app: '232px 1fr 324px',
+        app: '14.5rem 1fr',
+        mediumApp: '6rem 1fr',
+        smallApp: '3rem 1fr',
       },
     },
     colors: {
@@ -29,6 +31,9 @@ module.exports = {
         600: '#252D4A',
         700: '#181C2A',
         800: '#0E1116',
+      },
+      red: {
+        500: '#F75A68',
       },
     },
     backgroundImage: {

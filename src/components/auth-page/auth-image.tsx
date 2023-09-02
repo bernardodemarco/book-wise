@@ -4,12 +4,11 @@ import { BookWiseLogo } from '@/assets/icons/BookWiseLogo'
 
 export function AuthImage() {
   return (
-    // eslint-disable-next-line
-    <div className="bg-background-gradient relative hidden w-[600px] overflow-hidden rounded-xl lg:block">
+    <div className="relative hidden w-[600px] overflow-hidden rounded-xl bg-background-gradient lg:block">
       <Image
         src={authImage}
-        alt="Imagem de uma mulher deitada em um sofá lendo um livro"
-        className="h-absolute object-cover opacity-20"
+        alt="Imagem de uma mulher deitada em um sofá lendo um livro."
+        className="object-cover opacity-20"
         fill={true}
         sizes="(max-width: 1023px) 0px, 600px"
         priority={true}

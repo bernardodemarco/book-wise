@@ -1,15 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['class'],
   content: ['./src/**/*.tsx'],
   theme: {
-    container: {
-      center: true,
-      padding: '2rem',
-      screens: {
-        '2xl': '1400px',
-      },
-    },
     extend: {
       height: {
         'screen-height': 'calc(100vh - 40px)',
@@ -18,23 +10,6 @@ module.exports = {
         app: '14.5rem 1fr',
         mediumApp: '6rem 1fr',
         smallApp: '3rem 1fr',
-      },
-      borderColor: {
-        gradient: 'linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)',
-      },
-      keyframes: {
-        'accordion-down': {
-          from: { height: 0 },
-          to: { height: 'var(--radix-accordion-content-height)' },
-        },
-        'accordion-up': {
-          from: { height: 'var(--radix-accordion-content-height)' },
-          to: { height: 0 },
-        },
-      },
-      animation: {
-        'accordion-down': 'accordion-down 0.2s ease-out',
-        'accordion-up': 'accordion-up 0.2s ease-out',
       },
     },
     colors: {
@@ -68,5 +43,5 @@ module.exports = {
         'linear-gradient(0deg, rgba(42, 40, 121, 0.60) 0%, rgba(42, 40, 121, 0.60) 100%)',
     },
   },
-  plugins: [require('tailwindcss-animate')],
+  plugins: [],
 }

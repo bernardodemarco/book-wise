@@ -1,5 +1,4 @@
 import { Sidebar } from '@/components/Sidebar'
-// import { Menu } from 'lucide-react'
 
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   return (

@@ -1,5 +1,8 @@
+'use client'
+
 import { LogOut } from 'lucide-react'
 import { Avatar } from '../Avatar'
+import { signOut } from 'next-auth/react'
 
 interface LogoutButtonProps {
   avatarURL: string
@@ -7,8 +10,15 @@ interface LogoutButtonProps {
 }
 
 export function LogoutButton({ avatarURL, username }: LogoutButtonProps) {
+  function handleLogout() {
+    signOut()
+  }
+
   return (
-    <button className="mt-auto flex flex-col items-center gap-4 sm:flex-row sm:gap-3">
+    <button
+      onClick={handleLogout}
+      className="mt-auto flex flex-col items-center gap-4 sm:flex-row sm:gap-3"
+    >
       <Avatar src={avatarURL} alt="" size="sm" />
       <span className="hidden text-sm font-normal text-gray-200 md:block">
         {username}

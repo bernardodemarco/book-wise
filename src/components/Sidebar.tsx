@@ -33,8 +33,10 @@ export async function Sidebar() {
           <LogOut className="-order-1 h-4 w-4 text-red-500 sm:order-2 sm:h-5 sm:w-5" />
         </button>
       ) : (
-        <button className="mt-auto flex flex-col items-center gap-4 text-base font-bold text-gray-200 sm:flex-row sm:gap-3">
-          <span className="hidden md:block">Fazer login</span>
+        <button className="mt-auto flex flex-col items-center gap-4  sm:flex-row sm:gap-3">
+          <span className="block text-xs font-bold text-gray-200 sm:text-base sm:max-md:hidden">
+            Fazer login
+          </span>
           <LogIn className="h-4 w-4 text-green-100 sm:h-5 sm:w-5" />
         </button>
       )}

@@ -9,6 +9,9 @@ module.exports = {
       gridTemplateColumns: {
         app: 'minmax(13rem, 14.5rem) 1fr',
       },
+      borderColor: {
+        gradient: 'linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)',
+      },
     },
     colors: {
       green: {
@@ -33,9 +36,6 @@ module.exports = {
       red: {
         500: '#F75A68',
       },
-    },
-    borderColor: {
-      gradient: 'linear-gradient(180deg, #7FD1CC 0%, #9694F5 100%)',
     },
     backgroundImage: {
       'gradient-horizontal': 'linear-gradient(90deg, #7FD1CC 0%, #9694F5 100%)',

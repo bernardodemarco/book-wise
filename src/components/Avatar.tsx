@@ -9,15 +9,16 @@ type AvatarProps = ComponentProps<typeof Image> & {
 }
 
 export function Avatar({ src, alt, size, ...props }: AvatarProps) {
-  const { width, height, borderWidth } = getAvatarDimensionsOnSize(size)
+  const [width, height, borderWidth] = getAvatarDimensionsOnSize(size)
 
   return (
-    <div
-      className={`relative h-[${String(height)}px] w-[${String(
-        width,
-      )}px] border-green overflow-hidden rounded-full border`}
-    >
-      <Image className="" src={src} alt={alt} fill={true} {...props} />
-    </div>
+    <Image
+      className={`border-green-100 rounded-full ${borderWidth}`}
+      src={src}
+      alt={alt}
+      width={width}
+      height={height}
+      {...props}
+    />
   )
 }

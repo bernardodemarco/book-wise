@@ -4,7 +4,6 @@ import { Glasses, LogIn, LogOut, TrendingUp, User2 } from 'lucide-react'
 import { NavLink } from './NavLink'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
-import Image from 'next/image'
 import { Avatar } from './Avatar'
 
 export async function Sidebar() {
@@ -28,10 +27,10 @@ export async function Sidebar() {
         <button className="mt-auto flex items-center gap-3">
           <span className="text-sm font-normal text-gray-200">
             {!!session.user?.image && (
-              <Avatar src={session.user.image} alt="" size="sm" />
+              <Avatar src={session.user.image} alt="" size="lg" />
             )}
           </span>{' '}
-          <LogOut className="text-red-500 h-5 w-5" />
+          <LogOut className="h-5 w-5 text-red-500" />
         </button>
       ) : (
         <button className="mt-auto flex items-center gap-3 text-base font-bold text-gray-200">

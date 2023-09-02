@@ -1,28 +1,16 @@
-type AvatarDimensions = {
-  width: number
-  height: number
-  borderWidth: number
-}
+type AvatarDimensions = [
+  width: number,
+  height: number,
+  borderWidth: 'border' | 'border-2',
+]
 
 export function getAvatarDimensionsOnSize(
   size: 'sm' | 'md' | 'lg',
 ): AvatarDimensions {
   if (size === 'sm') {
-    return {
-      width: 32,
-      height: 32,
-      borderWidth: 1,
-    }
+    return [32, 32, 'border']
   } else if (size === 'md') {
-    return {
-      width: 40,
-      height: 40,
-      borderWidth: 1,
-    }
+    return [40, 40, 'border']
   }
-  return {
-    width: 72,
-    height: 72,
-    borderWidth: 2,
-  }
+  return [72, 72, 'border-2']
 }

@@ -3,7 +3,7 @@ import { GoogleIcon } from '@/assets/icons/GoogleIcon'
 import { GuestIcon } from '@/assets/icons/GuestIcon'
 
 import { AuthImage } from '@/components/auth-page/AuthImage'
-import { AuthCard } from '@/components/AuthCard'
+import { AuthCard } from '@/components/ui/auth-card'
 
 export default function AuthPage() {
   return (

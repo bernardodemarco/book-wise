@@ -1,9 +1,10 @@
 import { BookWiseLogo } from '@/assets/icons/BookWiseLogo'
-import { Glasses, LogIn, LogOut, TrendingUp, User2 } from 'lucide-react'
-import { NavLink } from './NavLink'
+import { Glasses, TrendingUp, User2 } from 'lucide-react'
+import { NavLink } from './nav-link'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
-import { Avatar } from './Avatar'
+import { LoginModal } from './login-modal'
+import { LogoutButton } from './logout-button'
 
 export async function Sidebar() {
   const session = await getServerSession(authOptions)
@@ -25,20 +26,9 @@ export async function Sidebar() {
         </NavLink>
       </nav>
       {session ? (
-        <button className="mt-auto flex flex-col items-center gap-4 sm:flex-row sm:gap-3">
-          <Avatar src={avatarURL} alt="" size="sm" />
-          <span className="hidden text-sm font-normal text-gray-200 md:block">
-            {username}
-          </span>
-          <LogOut className="-order-1 h-4 w-4 text-red-500 sm:order-2 sm:h-5 sm:w-5" />
-        </button>
+        <LogoutButton avatarURL={avatarURL} username={username} />
       ) : (
-        <button className="mt-auto flex flex-col items-center gap-4  sm:flex-row sm:gap-3">
-          <span className="block text-xs font-bold text-gray-200 sm:text-base sm:max-md:hidden">
-            Fazer login
-          </span>
-          <LogIn className="h-4 w-4 text-green-100 sm:h-5 sm:w-5" />
-        </button>
+        <LoginModal />
       )}
     </aside>
   )

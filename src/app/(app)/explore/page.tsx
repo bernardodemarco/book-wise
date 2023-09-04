@@ -1,3 +1,4 @@
+import { BookCard } from '@/components/ui/book-card'
 import { Glasses, Search } from 'lucide-react'
 
 export default function Explore() {
@@ -40,7 +41,9 @@ export default function Explore() {
           Computação
         </span>
       </nav>
-      <section></section>
+      <section className="mt-10">
+        <BookCard />
+      </section>
     </>
   )
 }

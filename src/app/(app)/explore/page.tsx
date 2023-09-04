@@ -1,4 +1,5 @@
 import { BookCard } from '@/components/ui/book-card'
+import { CategoryLabel } from '@/components/ui/category-label'
 import { Glasses, Search } from 'lucide-react'
 
 export default function Explore() {
@@ -19,27 +20,12 @@ export default function Explore() {
         </div>
       </header>
       <nav className="mt-10 flex flex-wrap items-center gap-3">
-        <span className="flex w-fit items-center justify-center rounded-full border border-purple-100 px-4 py-1 text-center text-base font-normal text-purple-100 transition-colors hover:cursor-pointer hover:bg-purple-200 hover:text-gray-100">
-          Computação
-        </span>
-        <span className="flex w-fit cursor-pointer items-center justify-center rounded-full border-none bg-purple-200 px-4 py-1 text-center text-base font-normal text-gray-100">
-          Ativo
-        </span>
-        <span className="flex w-fit items-center justify-center rounded-full border border-purple-100 px-4 py-1 text-center text-base font-normal text-purple-100 transition-colors hover:cursor-pointer hover:bg-purple-200 hover:text-gray-100">
-          Computação
-        </span>
-        <span className="flex w-fit items-center justify-center rounded-full border border-purple-100 px-4 py-1 text-center text-base font-normal text-purple-100 transition-colors hover:cursor-pointer hover:bg-purple-200 hover:text-gray-100">
-          Computação
-        </span>
-        <span className="flex w-fit items-center justify-center rounded-full border border-purple-100 px-4 py-1 text-center text-base font-normal text-purple-100 transition-colors hover:cursor-pointer hover:bg-purple-200 hover:text-gray-100">
-          Computação
-        </span>
-        <span className="flex w-fit items-center justify-center rounded-full border border-purple-100 px-4 py-1 text-center text-base font-normal text-purple-100 transition-colors hover:cursor-pointer hover:bg-purple-200 hover:text-gray-100">
-          Computação
-        </span>
-        <span className="flex w-fit items-center justify-center rounded-full border border-purple-100 px-4 py-1 text-center text-base font-normal text-purple-100 transition-colors hover:cursor-pointer hover:bg-purple-200 hover:text-gray-100">
-          Computação
-        </span>
+        <CategoryLabel>Computação</CategoryLabel>
+        <CategoryLabel>Computação</CategoryLabel>
+        <CategoryLabel>Computação</CategoryLabel>
+        <CategoryLabel>Computação</CategoryLabel>
+        <CategoryLabel>Computação</CategoryLabel>
+        <CategoryLabel>Computação</CategoryLabel>
       </nav>
       <section className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-booksGrid">
         <BookCard />

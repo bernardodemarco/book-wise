@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
-import { getNavLinkTextOnSlug } from '@/utils/navLinkData'
+import { getTextOnSlug } from '@/utils/navLinkData'
 import { Glasses, TrendingUp, User2 } from 'lucide-react'
 
 interface NavLinkProps {
@@ -12,7 +12,7 @@ interface NavLinkProps {
 export function NavLink({ slug }: NavLinkProps) {
   const currentPath = useSelectedLayoutSegment() ?? ''
   const isActive = currentPath === slug
-  const navLinkText = getNavLinkTextOnSlug(slug)
+  const navLinkText = getTextOnSlug(slug)
 
   const linkClass = isActive
     ? "group mr-4 flex items-center gap-3 before:block before:h-4 before:w-1 before:rounded-full before:bg-gradient-vertical before:content-[''] sm:before:h-6 sm:before:w-1"

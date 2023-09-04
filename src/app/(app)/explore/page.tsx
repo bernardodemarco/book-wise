@@ -1,15 +1,13 @@
 import { BookCard } from '@/components/ui/book-card'
 import { CategoryLabel } from '@/components/ui/category-label'
+import { Heading } from '@/components/ui/heading'
 import { Glasses, Search } from 'lucide-react'
 
 export default function Explore() {
   return (
     <>
       <header className="flex flex-col items-center gap-4 lg:flex-row lg:items-start lg:justify-between">
-        <h1 className="flex items-center gap-3 text-xl font-bold text-gray-100 sm:text-2xl">
-          <Glasses className="h-8 w-8 text-green-100" />
-          Explorar
-        </h1>
+        <Heading slug="explore" />
         <div className="flex w-[400px] max-w-[60vw] items-center gap-2 rounded border border-gray-500 px-5 py-3 transition-colors focus-within:border-green-200">
           <input
             type="text"

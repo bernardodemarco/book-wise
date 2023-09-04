@@ -41,7 +41,12 @@ export default function Explore() {
           Computação
         </span>
       </nav>
-      <section className="mt-10">
+      <section className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-booksGrid">
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
+        <BookCard />
         <BookCard />
       </section>
     </>

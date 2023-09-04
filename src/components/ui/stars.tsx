@@ -2,10 +2,10 @@ import { FilledStar } from '@/assets/icons/filled-star'
 import { Star } from '@/assets/icons/star'
 
 interface StarsProps {
-  numOfFilledStars: number
+  rating: number
 }
 
-export function Stars({ numOfFilledStars }: StarsProps) {
+export function Stars({ rating }: StarsProps) {
   const starsArray = Array.from({ length: 5 }).map((_, index) => {
     return `star-${index}`
   })
@@ -13,7 +13,7 @@ export function Stars({ numOfFilledStars }: StarsProps) {
   return (
     <div className="flex items-center gap-1">
       {starsArray.map((star, index) => {
-        const isFilled = index <= numOfFilledStars - 1
+        const isFilled = index <= rating - 1
 
         if (isFilled) {
           return <FilledStar key={star} />

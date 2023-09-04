@@ -1,21 +1,14 @@
 import { BookCard } from '@/components/ui/book-card'
 import { CategoryLabel } from '@/components/ui/category-label'
 import { Heading } from '@/components/ui/heading'
-import { Glasses, Search } from 'lucide-react'
+import { Input } from '@/components/ui/input'
 
 export default function Explore() {
   return (
     <>
       <header className="flex flex-col items-center gap-4 lg:flex-row lg:items-start lg:justify-between">
         <Heading slug="explore" />
-        <div className="flex w-[400px] max-w-[60vw] items-center gap-2 rounded border border-gray-500 px-5 py-3 transition-colors focus-within:border-green-200">
-          <input
-            type="text"
-            placeholder="Buscar livro ou autor"
-            className="flex-1 bg-gray-800 text-xs text-gray-400 outline-none sm:text-base"
-          />
-          <Search className="h-3 w-3 text-gray-500 sm:h-5 sm:w-5" />
-        </div>
+        <Input />
       </header>
       <nav className="mt-10 flex flex-wrap items-center gap-3">
         <CategoryLabel>Computação</CategoryLabel>

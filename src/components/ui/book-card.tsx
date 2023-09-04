@@ -12,7 +12,7 @@ export function BookCard() {
         </strong>
         <span className="block text-sm text-gray-400">George Orwell</span>
         <div className="mt-auto">
-          <Stars />
+          <Stars numOfFilledStars={3} />
         </div>
       </section>
     </article>

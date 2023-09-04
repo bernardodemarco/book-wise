@@ -1,4 +1,4 @@
-import { BookWiseLogo } from '@/assets/icons/BookWiseLogo'
+import { BookWiseLogo } from '@/assets/icons/book-wise-logo'
 import { NavLink } from './nav-link'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'

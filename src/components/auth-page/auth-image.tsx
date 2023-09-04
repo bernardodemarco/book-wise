@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import authImage from 'public/auth-image.png'
-import { BookWiseLogo } from '@/assets/icons/BookWiseLogo'
+import { BookWiseLogo } from '@/assets/icons/book-wise-logo'
 
 export function AuthImage() {
   return (

@@ -3,8 +3,8 @@
 import { LogIn, X } from 'lucide-react'
 import * as Dialog from '@radix-ui/react-dialog'
 import { AuthCard } from '../auth-card'
-import { GoogleIcon } from '@/assets/icons/GoogleIcon'
-import { GithubIcon } from '@/assets/icons/GithubIcon'
+import { GoogleIcon } from '@/assets/icons/google-icon'
+import { GithubIcon } from '@/assets/icons/github-icon'
 
 export function LoginModal() {
   return (

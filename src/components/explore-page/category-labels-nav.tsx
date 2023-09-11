@@ -11,14 +11,30 @@ export function CategoryLabelsNav() {
       perView: 'auto',
       spacing: 12,
     },
+    breakpoints: {
+      '(max-width: 1100px)': {
+        slides: {
+          perView: 3.5,
+          spacing: 10,
+        },
+      },
+      '(max-width: 850px)': {
+        slides: {
+          perView: 2.5,
+          spacing: 10,
+        },
+      },
+      '(max-width: 400px)': {
+        slides: {
+          perView: 1.5,
+          spacing: 10,
+        },
+      },
+    },
   })
 
   return (
-    <nav
-      ref={sliderRef}
-      // className="mt-10 flex flex-wrap items-center gap-3"
-      className="keen-slider mt-10"
-    >
+    <nav ref={sliderRef} className="keen-slider mt-10 w-fit overflow-hidden">
       <CategoryLabel>Computação</CategoryLabel>
       <CategoryLabel>Computação</CategoryLabel>
       <CategoryLabel>Computação</CategoryLabel>

@@ -1,6 +1,6 @@
-import { GithubIcon } from '@/assets/icons/GithubIcon'
-import { GoogleIcon } from '@/assets/icons/GoogleIcon'
-import { GuestIcon } from '@/assets/icons/GuestIcon'
+import { GithubIcon } from '@/assets/icons/github-icon'
+import { GoogleIcon } from '@/assets/icons/google-icon'
+import { GuestIcon } from '@/assets/icons/gues-icon'
 
 import { AuthImage } from '@/components/auth-page/auth-image'
 import { AuthCard } from '@/components/ui/auth-card'

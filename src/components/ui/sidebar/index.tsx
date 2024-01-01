@@ -1,4 +1,4 @@
-import { BookWiseLogo } from '@/assets/icons/BookWiseLogo'
+import { BookWiseLogo } from '@/assets/icons/book-wise-logo'
 import { NavLink } from './nav-link'
 import { getServerSession } from 'next-auth'
 import { authOptions } from '@/lib/auth'
@@ -16,7 +16,7 @@ export async function Sidebar() {
       <nav className="flex flex-col items-start gap-6">
         <NavLink slug="" />
         <NavLink slug="explore" />
-        <NavLink slug="profile" />
+        {session && <NavLink slug="profile" />}
       </nav>
       {session ? (
         <LogoutButton avatarURL={avatarURL} username={username} />

@@ -10,6 +10,8 @@ module.exports = {
         app: '14.5rem 1fr',
         mediumApp: '6rem 1fr',
         smallApp: '3rem 1fr',
+        bookCard: '108px 1fr',
+        booksGrid: 'repeat(auto-fill, minmax(340px, 1fr))',
       },
     },
     colors: {

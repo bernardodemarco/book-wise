@@ -1,4 +1,4 @@
-export function getNavLinkTextOnSlug(
+export function getTextOnSlug(
   slug: '' | 'explore' | 'profile',
 ): 'Início' | 'Explorar' | 'Perfil' {
   if (slug === '') {
